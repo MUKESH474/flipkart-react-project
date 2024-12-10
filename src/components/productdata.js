@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Footer from "./footer"
 import Header from "./header"
 import Button from 'react-bootstrap/Button';
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate,useLocation, Link, NavLink } from "react-router-dom";
 
 function Productdata(){
     const[data,setdata]=useState([])
@@ -35,8 +35,8 @@ function Productdata(){
                         <p style={{marginTop:'50px'}}>Rating:{data.rating && data.rating.rate}</p>
                         <p style={{marginTop:'10px'}}>Count:{data.rating && data.rating.count}</p>
                         <p style={{marginTop:'40px'}}>{data.description}</p>
-                        <Button style={{marginTop:'30px'}} variant="outline-warning" onClick={()=>{nav("/cart")}} >View cart</Button>
-                        <Button style={{marginTop:'30px'}} className="ms-5" variant="outline-danger">Add to Cart</Button>
+                        <Button className="mt-4" variant="outline-warning" onClick={()=>{nav("/cart")}} >Add</Button>
+                        <NavLink to={"/cart"} className="btn btn-dark ms-5 mt-4" > Go to cart</NavLink>
                     </div>
                 </div>
                 </>

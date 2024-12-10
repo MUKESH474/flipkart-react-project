@@ -51,7 +51,7 @@ function Content(){
             </div>
             <hr/>
             {/* <Sidenav/> */}
-            <div className='d-flex row'  >
+            <div className='d-flex row concard'  >
                 <div className='col-lg-2 col-md-2  col-2 me-5 mt-5 mx-5 my-5 col-sm-12' >
                     <Card style={{ width: '20rem' }} className='cardc'>
                         <Link to={'/electronics'} className='cardlink'>
